@@ -3,4 +3,6 @@
     <color name="colorPrimary">#FDD835</color>
     <color name="colorPrimaryDark">#F9A825</color>
     <color name="colorAccent">#4DD0E1</color>
+    <color name="immersiveBar">#99000000 </color>
+
 </resources>
