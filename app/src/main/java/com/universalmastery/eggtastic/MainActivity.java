@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity
         RecyclerView cardRecyclerView = (RecyclerView) findViewById(R.id.card_recyclerview);
         cardRecyclerView.setLayoutManager(new LinearLayoutManager(this));
         cardRecyclerView.setItemAnimator(new DefaultItemAnimator());
+        cardRecyclerView.setHasFixedSize(true);
     }
 
     @Override
