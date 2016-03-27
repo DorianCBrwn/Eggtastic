@@ -18,10 +18,13 @@ public class MainActivity extends AppCompatActivity
 
 
 
-    private RecyclerView cardRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        RecyclerView cardRecyclerView;
+        RecyclerView.LayoutManager linearLayoutManager;
+
+
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
@@ -39,13 +42,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        RecyclerView cardRecyclerView = (RecyclerView) findViewById(R.id.card_recyclerview);
-        cardRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        cardRecyclerView = (RecyclerView) findViewById(R.id.card_recyclerview);
         cardRecyclerView.setItemAnimator(new DefaultItemAnimator());
-//        cardRecyclerView.setHasFixedSize(true);
+        cardRecyclerView.setHasFixedSize(true);
 
-        LinearLayoutManager llm = new LinearLayoutManager(this);
-        cardRecyclerView.setLayoutManager(llm);
+        linearLayoutManager= new LinearLayoutManager(this);
+        cardRecyclerView.setLayoutManager(linearLayoutManager);
     }
 
     @Override

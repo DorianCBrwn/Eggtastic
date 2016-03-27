@@ -8,7 +8,7 @@
         android:id="@+id/card_view"
         android:layout_gravity="center"
         android:layout_width="match_parent"
-        android:layout_height="264dp"
+        android:layout_height="wrap_content"
         card_view:cardCornerRadius="4dp"
         android:layout_margin="8dp"
         android:elevation="1dp"
@@ -29,6 +29,7 @@
             />
 
         <ImageView
+            android:id="@+id/recipe_image"
             android:layout_below="@+id/recipe_name"
             android:layout_width="match_parent"
             android:layout_height="168dp"
@@ -41,7 +42,7 @@
             />
     <TextView
         android:id="@+id/recipe_description"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/recipe_image"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:text="Recipe description"
