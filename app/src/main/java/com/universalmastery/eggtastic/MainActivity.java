@@ -23,6 +23,7 @@ public class MainActivity extends AppCompatActivity
     protected void onCreate(Bundle savedInstanceState) {
         RecyclerView cardRecyclerView;
         RecyclerView.LayoutManager linearLayoutManager;
+        RecyclerView.Adapter adapter;
 
 
         super.onCreate(savedInstanceState);
@@ -48,6 +49,9 @@ public class MainActivity extends AppCompatActivity
 
         linearLayoutManager= new LinearLayoutManager(this);
         cardRecyclerView.setLayoutManager(linearLayoutManager);
+
+        adapter = new RecipeAdapter();
+        cardRecyclerView.setAdapter(adapter);
     }
 
     @Override

@@ -35,19 +35,10 @@
             android:layout_height="168dp"
             android:src="@drawable/hardboiled_egg_row_large"
             android:scaleType="centerCrop"
-            android:layout_marginLeft="8dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginRight="8dp"
+            android:layout_margin="8dp"
             android:layout_centerInParent="true"
             />
-    <TextView
-        android:id="@+id/recipe_description"
-        android:layout_below="@+id/recipe_image"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Recipe description"
-        android:textAlignment="center"
-        android:layout_marginTop="8dp" />
+
 
 </RelativeLayout>
 

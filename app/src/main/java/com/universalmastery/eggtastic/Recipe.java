@@ -2,16 +2,27 @@ package com.universalmastery.eggtastic;
 
 /**
  * Created by D.Brown on 3/26/16.
- * Class to store recipe data
+ * Class to store recipe CardView data
  */
 public class Recipe {
-    String recipeName;
-    String recipeDescription;
-    int recipeImage;
+   private String recipeName;
+    private String recipeDescription;
+    private int recipeImage;
 
-    public Recipe(String recipeName, String recipeDescription, int recipeImage) {
+    public String getRecipeName() {
+        return recipeName;
+    }
+
+    public void setRecipeName(String recipeName) {
         this.recipeName = recipeName;
-        this.recipeDescription = recipeDescription;
+    }
+
+
+    public int getRecipeImage() {
+        return recipeImage;
+    }
+
+    public void setRecipeImage(int recipeImage) {
         this.recipeImage = recipeImage;
     }
 }
