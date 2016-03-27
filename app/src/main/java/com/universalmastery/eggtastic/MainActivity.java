@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity
 
         adapter = new RecipeAdapter();
         cardRecyclerView.setAdapter(adapter);
+        adapter.hasStableIds();
     }
 
     @Override
