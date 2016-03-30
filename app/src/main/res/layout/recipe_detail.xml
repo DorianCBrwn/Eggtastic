@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+
+    <ImageView
+        android:padding="8dp"
+        android:id="@+id/detail_recipe_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/hardboiled_egg_row"
+        />
+
+    <TextView
+        android:id="@+id/_detail_recipe_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Recipe Name"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:padding="12dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+<TextView
+    android:id="@+id/detail_summary"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/detail_recipe_image"
+    android:layout_centerInParent="true"
+    android:text="Summary"
+    android:textSize="18sp"
+    style="@style/Detail_Summary"
+
+    />
+
+    <TextView
+        android:id="@+id/detail_ingredients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ingredients"
+        android:layout_below="@+id/detail_summary"
+        android:paddingTop="8dp"
+        android:paddingLeft="16dp"
+        android:textSize="16sp"
+        />
+
+    <TextView
+        android:id="@+id/detail_cooktime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cook Time "
+        android:paddingTop="8dp"
+        android:layout_marginRight="10dp"
+        android:textSize="16sp"
+        android:layout_alignTop="@+id/detail_cooktime_num"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="27dp" />
+    <TextView
+        android:id="@+id/detail_cooktime_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:paddingTop="8dp"
+        android:layout_marginRight="16dp"
+        android:layout_below="@+id/detail_summary"
+        android:layout_alignRight="@+id/detail_cooktime"
+        android:layout_alignParentEnd="true"
+        android:textSize="16sp"
+        />
+
+    <WebView
+        android:id="@+id/details_directions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/detail_ingredients_icons"
+        android:layout_marginTop="12dp"
+        android:layout_centerHorizontal="true"
+        >
+
+    </WebView>
+
+    <LinearLayout
+        android:id="@+id/detail_ingredients_icons"
+        android:layout_width="150dp"
+        android:layout_height="36dp"
+        android:layout_below="@+id/detail_ingredients"
+        android:padding="8dp"
+        >
+
+        <ImageView
+            android:id="@+id/detail_butter"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/Butter"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/detail_egg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/Eggs"
+            android:layout_marginStart="26dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            />
+
+        <ImageView
+            android:id="@+id/detail_oil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cooking_oil"
+            android:layout_marginStart="26dp"
+            android:layout_weight="1"
+            android:layout_gravity="center"
+            android:visibility="visible"
+            />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

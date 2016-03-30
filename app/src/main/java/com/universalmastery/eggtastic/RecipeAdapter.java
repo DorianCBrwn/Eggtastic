@@ -23,7 +23,7 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         items = new ArrayList<>();
         Recipe recipe = new Recipe();
         recipe.setRecipeName("Hard Boiled");
-        recipe.setRecipeImage(R.drawable.hardboiled_egg_row_large);
+        recipe.setRecipeImage(R.drawable.hardboiled_egg_row);
         items.add(recipe);
 
         recipe = new Recipe();
@@ -55,9 +55,9 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
 
     @Override
     public RecipeAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext())
+        View cardLayoutView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.recipe_card, viewGroup, false);
-        ViewHolder viewHolder = new ViewHolder(v);
+        ViewHolder viewHolder = new ViewHolder(cardLayoutView);
         return viewHolder;
     }
 
