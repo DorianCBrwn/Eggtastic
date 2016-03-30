@@ -1,5 +1,6 @@
 package com.universalmastery.eggtastic;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +16,10 @@ import java.util.List;
  */
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
+private Context context;
+    List<Recipe> items;
 
-    List<Recipe> items;;
-
-    public RecipeAdapter() {
+    public RecipeAdapter(Context context) {
         super();
         items = new ArrayList<>();
         Recipe recipe = new Recipe();
@@ -51,6 +52,8 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         recipe.setRecipeImage(R.drawable.poached_egg);
         items.add(recipe);
 
+        this.context = context;
+
     }
 
     @Override
@@ -73,15 +76,23 @@ public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder
         return items.size();
     }
 
-   class ViewHolder extends RecyclerView.ViewHolder{
+   class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView recipeImage;
         public TextView recipeName;
 
         public ViewHolder(View itemView) {
             super(itemView);
+            itemView.setOnClickListener(this);
             recipeImage = (ImageView) itemView.findViewById(R.id.recipe_image);
             recipeName = (TextView) itemView.findViewById(R.id.recipe_name);
+
+
         }
-    }
+
+       @Override
+       public void onClick(View v) {
+
+       }
+   }
 }
