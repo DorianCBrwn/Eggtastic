@@ -5,7 +5,7 @@ package com.universalmastery.eggtastic;
  * Class to store recipe CardView data
  */
 public class Recipe {
-   private String recipeName;
+    private String recipeName;
     private String recipeDescription;
     private int recipeImage;
 
@@ -25,4 +25,13 @@ public class Recipe {
     public void setRecipeImage(int recipeImage) {
         this.recipeImage = recipeImage;
     }
+
+    public String getRecipeDescription() {
+        return recipeDescription;
+    }
+
+    public void setRecipeDescription(String recipeDescription) {
+        this.recipeDescription = recipeDescription;
+    }
 }
+
