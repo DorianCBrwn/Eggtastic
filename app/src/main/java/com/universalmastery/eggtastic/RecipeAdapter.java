@@ -1,6 +1,7 @@
 package com.universalmastery.eggtastic;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,19 +10,17 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by D.Brown on 3/26/16.
  */
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
-private Context context;
-    List<Recipe> items;
+public Context context;
+    public ArrayList<Recipe> items;
 
     public RecipeAdapter(Context context) {
         super();
-        items = new ArrayList<>();
         Recipe recipe = new Recipe();
         recipe.setRecipeName("Hard Boiled");
         recipe.setRecipeImage(R.drawable.hardboiled_egg_row);
@@ -60,7 +59,7 @@ private Context context;
     public RecipeAdapter.ViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
         View cardLayoutView = LayoutInflater.from(viewGroup.getContext())
                 .inflate(R.layout.recipe_card, viewGroup, false);
-        ViewHolder viewHolder = new ViewHolder(cardLayoutView);
+        ViewHolder viewHolder = new ViewHolder(cardLayoutView,context,items);
         return viewHolder;
     }
 
@@ -76,13 +75,16 @@ private Context context;
         return items.size();
     }
 
-   class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+  static  class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
 
         public ImageView recipeImage;
         public TextView recipeName;
-
-        public ViewHolder(View itemView) {
+       Context context;
+ArrayList<Recipe> recipes = new ArrayList<>();
+        public ViewHolder(View itemView, Context context,ArrayList<Recipe>recipes) {
             super(itemView);
+            this.recipes = recipes;
+            this.context = context;
             itemView.setOnClickListener(this);
             recipeImage = (ImageView) itemView.findViewById(R.id.recipe_image);
             recipeName = (TextView) itemView.findViewById(R.id.recipe_name);
@@ -92,6 +94,13 @@ private Context context;
 
        @Override
        public void onClick(View v) {
+            int position = getAdapterPosition();
+           Recipe recipe = this.recipes.get(position);
+           Intent intent = new Intent(context, DetailActivity.class);
+           intent.putExtra("image id", recipe.getRecipeImage());
+           intent.putExtra("recipe name",recipe.getRecipeName());
+           intent.putExtra("recipe description", recipe.getRecipeDescription());
+           intent.putExtra("cook time",recipe.getCookTime());
 
        }
    }

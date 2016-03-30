@@ -61,16 +61,17 @@
         android:layout_above="@+id/detail_ingredients_icons"
         android:layout_alignParentEnd="true" />
 
-    <WebView
+    <TextView
         android:id="@+id/details_directions"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/detail_ingredients_icons"
         android:layout_marginTop="12dp"
         android:layout_centerHorizontal="true"
+        android:text="@string/hardboiled_egg"
         >
 
-    </WebView>
+    </TextView>
 
     <LinearLayout
         android:id="@+id/detail_ingredients_icons"

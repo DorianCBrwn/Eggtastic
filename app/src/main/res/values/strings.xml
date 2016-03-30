@@ -5,4 +5,17 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string name="action_settings">Settings</string>
+
+    <string name="hardboiled_egg">
+    <![CDATA[
+
+<p> <ol>
+<li>Place eggs in the bottom of a saucepan</li>
+<li> Heat on high heat and bring the water to a full rolling boil. <em><strong>Optional:</strong>Adding 1/2 teaspoon of salt to the water will make the eggs easier to peel and help to prevent the shells from cracking.</em></li>
+<li>Turn off the heat, keep the pan on the hot burner, cover with a pot lid. Then the eggs let sit in the hot water for 10-12 minutes. <em>Larger eggs / larger pots may increase cook time by a few extra minutes.</em></li>
+<li> Drain the water from the pot and run cold water over the eggs to cool them and to stop them from cooking.<em> The eggs should be easier to peel once cooled down to room temperature. </em></li>
+
+        ]]>
+    </string>
+
 </resources>

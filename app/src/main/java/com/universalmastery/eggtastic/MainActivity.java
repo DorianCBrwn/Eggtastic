@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity
         linearLayoutManager= new LinearLayoutManager(this);
         cardRecyclerView.setLayoutManager(linearLayoutManager);
 
-        adapter = new RecipeAdapter(getApplicationContext());
+        adapter = new RecipeAdapter(this);
         cardRecyclerView.setAdapter(adapter);
         adapter.hasStableIds();
     }

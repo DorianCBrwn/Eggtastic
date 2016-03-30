@@ -8,6 +8,8 @@ public class Recipe {
     private String recipeName;
     private String recipeDescription;
     private int recipeImage;
+    private String cookTime;
+
 
     public String getRecipeName() {
         return recipeName;
@@ -32,6 +34,14 @@ public class Recipe {
 
     public void setRecipeDescription(String recipeDescription) {
         this.recipeDescription = recipeDescription;
+    }
+
+    public String getCookTime() {
+        return cookTime;
+    }
+
+    public void setCookTime(String cookTime) {
+        this.cookTime = cookTime;
     }
 }
 
