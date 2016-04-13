@@ -17,38 +17,44 @@ import java.util.ArrayList;
 public class RecipeAdapter extends RecyclerView.Adapter<RecipeAdapter.ViewHolder> {
 
 public Context context;
-    public ArrayList<Recipe> items;
+    public ArrayList<Recipe> items = new ArrayList<>();
 
     public RecipeAdapter(Context context) {
         super();
         Recipe recipe = new Recipe();
         recipe.setRecipeName("Hard Boiled");
         recipe.setRecipeImage(R.drawable.hardboiled_egg_row);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         recipe = new Recipe();
         recipe.setRecipeName("Soft Boiled");
         recipe.setRecipeImage(R.drawable.soft_boiled_eggs);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         recipe = new Recipe();
         recipe.setRecipeName("Scrambled");
         recipe.setRecipeImage(R.drawable.scrambled_eggs);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         recipe = new Recipe();
         recipe.setRecipeName("Sunny Side Up");
         recipe.setRecipeImage(R.drawable.sunny_side_up);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         recipe = new Recipe();
         recipe.setRecipeName("Basted Egg");
         recipe.setRecipeImage(R.drawable.basted_egg);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         recipe = new Recipe();
         recipe.setRecipeName("Poached Egg");
         recipe.setRecipeImage(R.drawable.poached_egg);
+        recipe.setRecipeDescription(context.getResources().getString(R.string.hardboiled_egg));
         items.add(recipe);
 
         this.context = context;
@@ -99,9 +105,9 @@ ArrayList<Recipe> recipes = new ArrayList<>();
            Intent intent = new Intent(context, DetailActivity.class);
            intent.putExtra("image id", recipe.getRecipeImage());
            intent.putExtra("recipe name",recipe.getRecipeName());
-           intent.putExtra("recipe description", recipe.getRecipeDescription());
+           intent.putExtra(DetailActivity.RECIPE_DESC, recipe.getRecipeDescription());
            intent.putExtra("cook time",recipe.getCookTime());
-
+            context.startActivity(intent);
        }
    }
 }
